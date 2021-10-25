@@ -78,7 +78,7 @@ namespace TaxCalculation.UnitTests
         public static void Setup(TestContext context)
         {
             _productManager = Factory.CreateProductService();
-            _dateTimeService = Factory.CreateDateTimeSevice(new DateTime(2021, 10, 24));
+            _dateTimeService = Factory.CreateDateTimeService(new DateTime(2021, 10, 24));
             _taxManager = Factory.CreateTaxManager(_dateTimeService);
         }
 

@@ -16,7 +16,7 @@ namespace TaxCalculation.ServiceFactory
             return new TaxManager(dateTimeSvc);
         }
 
-        public static IDateTimeService CreateDateTimeSevice(DateTime now)
+        public static IDateTimeService CreateDateTimeService(DateTime now)
         {
             return new DateTimeService.DateTimeService(now);
         }

@@ -14,7 +14,7 @@ namespace Tax.Console
         private static void Main(string[] args)
         {
             _productManager = Factory.CreateProductService();
-            _dateTimeService = Factory.CreateDateTimeSevice(DateTime.Now);
+            _dateTimeService = Factory.CreateDateTimeService(DateTime.Now);
             _taxManager = Factory.CreateTaxManager(_dateTimeService);
 
             //Create an invoice
