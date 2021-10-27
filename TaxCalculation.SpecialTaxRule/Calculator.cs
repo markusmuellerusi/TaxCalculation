@@ -9,9 +9,11 @@ namespace TaxCalculation.SpecialTaxRule
         {
             if (includeQuantity)
             {
-                return Math.Round(price * rate * 20.0M + 0.499m, MidpointRounding.AwayFromZero) * 0.05M;
+                //For wholesale trade
+                return Math.Round(quantity * price * rate * 20.0M + 0.499m, MidpointRounding.AwayFromZero) * 0.05M;
             }
-
+            
+            //For retail trade
             var result = Math.Round(price * rate * 20.0M + 0.499m, MidpointRounding.AwayFromZero) * 0.05M;
             return result;
         }
